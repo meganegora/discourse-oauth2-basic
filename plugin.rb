@@ -185,7 +185,7 @@ class ::OAuth2BasicAuthenticator < Auth::ManagedAuthenticator
     bearer_token = "Bearer #{token}"
     connection = Excon.new(
       user_json_url,
-      headers: { 'Authorization' => bearer_token, 'Accept' => 'application/json' }
+      headers: { 'Authorization' => bearer_token, 'Accept' => 'application/json', 'x-api-key' => '87beb9c0b7ca4a0882618a64bfc23be7' }
     )
     user_json_response = connection.request(method: user_json_method)
 
